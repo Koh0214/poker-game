@@ -31,8 +31,8 @@ def deal_cards(deck)
   puts "プレイヤーは#{player_match_number}枚マッチしました。"
   puts "cpuは#{cpu_match_number}枚マッチしました。"
 
-  # puts "--------残りのカード------------"
-  # puts deck.sort{|a, b| a[:number] <=> b[:number] }
+  puts "--------残りのカード------------"
+  puts deck.sort{|a, b| a[:number] <=> b[:number] }
 
 end
 
@@ -58,6 +58,7 @@ end
 
 
 deck = []
+make_deck(deck)
 
 loop do
   puts "ポーカー ver.1"
@@ -65,7 +66,6 @@ loop do
   com = gets.to_i
   case com
     when 1
-      make_deck(deck)
       deal_cards(deck)
     when 2
       break
